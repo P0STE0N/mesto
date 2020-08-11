@@ -1,10 +1,6 @@
 .profile__editButton {
   width: 24px;
   height: 24px;
-
-  background-position: center;
-  background-size: 10px;
-  background-repeat: no-repeat;
   background-color: black;
   border: 1px solid #ffffff;
   margin-top: 35px;
@@ -21,6 +17,6 @@
   .profile__editButton {
   position: absolute;
   margin-top: 135px;
-  margin-left: 110px;
+  margin-left: 230px;
   }
 }
