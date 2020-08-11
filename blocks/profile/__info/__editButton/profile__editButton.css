@@ -1,7 +1,7 @@
 .profile__editButton {
   width: 24px;
   height: 24px;
-  background-image: url(../../../../image/Vector.png);
+
   background-position: center;
   background-size: 10px;
   background-repeat: no-repeat;
@@ -9,7 +9,7 @@
   border: 1px solid #ffffff;
   margin-top: 35px;
   margin-left: 10px;
-  
+  cursor: pointer;
 }
 
 .profile__editButton:hover {

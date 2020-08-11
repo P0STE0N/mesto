@@ -8,6 +8,7 @@
   background-color: black;
   border: 2px solid #ffffff;
   color: white;
+  cursor: pointer;
 }
 .profile__addButton:hover {
   opacity: 0.8;
