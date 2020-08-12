@@ -1,4 +1,8 @@
 .profile__editButton {
+  background-image: url(../../../../image/edit.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
   width: 24px;
   height: 24px;
   background-color: black;
@@ -10,13 +14,12 @@
 
 .profile__editButton:hover {
   opacity: 0.8;
-  
 }
 
 @media screen and (max-width: 890px) {
   .profile__editButton {
-  position: absolute;
-  margin-top: 135px;
-  margin-left: 230px;
+    position: absolute;
+    margin-top: 135px;
+    margin-left: 230px;
   }
 }
