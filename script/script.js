@@ -16,18 +16,17 @@ function exitPopup() {
 
 function openPopup() {
   popup.style.display = "block";
-  nameInput.value = userName.textContent; 
+  nameInput.value = userName.textContent;
   jobInput.value = userProff.textContent;
 }
 
 function formSubmitHandler(evt) {
-  nameInput=nameInput.value;
-  jobInput=jobInput.value;
-  userName.textContent = nameInput;
-  userProff.textContent = jobInput;
+  evt.preventDefault();
+
+  userName.textContent = nameInput.value;
+  userProff.textContent = jobInput.value;
 
   exitPopup();
-  evt.preventDefault();
 }
 
 userForm.addEventListener("submit", formSubmitHandler);
