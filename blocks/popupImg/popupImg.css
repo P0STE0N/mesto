@@ -1,0 +1,16 @@
+@import url(./__close/popupImg__close.css);
+@import url(./__src/popupImg__src.css);
+@import url(./__title/popupImg__title.css);
+.popupImg {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    transition: all 0.3s;
+    
+}

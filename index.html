@@ -26,50 +26,7 @@
         <button class="profile__addButton"></button>
       </section>
       <section class="card-list">
-        <div class="card">
-          <img class="card__image" alt="Кипр" src="./image/1.jpg" />
-          <div class="card__description">
-            <h2 class="card__name">
-              Кипр
-            </h2>
-            <button class="card__like-icon"></button>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card__image" alt="Гора-Эльбрус" src="./image/2.png" />
-          <div class="card__description">
-            <h2 class="card__name">Гора Эльбрус</h2>
-            <button class="card__like-icon"></button>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card__image" alt="Домбай" src="./image/3.png" />
-          <div class="card__description">
-            <h2 class="card__name">Домбай</h2>
-            <button class="card__like-icon"></button>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card__image" alt="Брасов" src="./image/4.jpg" />
-          <div class="card__description">
-            <h2 class="card__name">Брасов</h2>
-            <button class="card__like-icon"></button>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card__image" alt="Дрангарнир" src="./image/5.jpg" />
-          <div class="card__description">
-            <h2 class="card__name">Дрангарнир</h2>
-            <button class="card__like-icon"></button>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card__image" alt="Боливия" src="./image/6.jpg" />
-          <div class="card__description">
-            <h2 class="card__name">Боливия</h2>
-            <button class="card__like-icon"></button>
-          </div>
-        </div>
+        
       </section>
       <section class="popup">
         <div class="popup__content">
@@ -94,6 +51,39 @@
           </form>
         </div>
       </section>
+
+      <section class="popupAdd">
+        <div class="popupAdd__content">
+          <button class="popupAdd__close"></button>
+          <h3 class="popupAdd__title">Новое место</h3>
+          <form class="popupAdd__form" name="new">
+            <input
+              type="text"
+              name="name"
+              class="popupAdd__input popupAdd__input_type_name"
+              placeholder="Название"
+            />
+            <input 
+              type="url"
+              name="link"
+              class="popupAdd__input popupAdd__input_type_link"
+              placeholder="Ссылка на картинку"
+            />
+            <button type="submit" class="button popupAdd__button">
+              Сохранить
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section class="popupImg">
+        <div class="popup__content_img">
+          <img class="popupImg__src" src="">
+          <h2 class="popupImg__title"></h2>
+          <button class="popupImg__close"></button>
+        </div>
+      </secrion>
+
     </main>
     <footer class="footer">
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>

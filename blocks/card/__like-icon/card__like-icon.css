@@ -1,15 +1,12 @@
 .card__like-icon {
-  background-image: url(../../../image/like.svg);
+  background: url(../../../image/like.svg);
   width: 20px;
   height: 18px;
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-color: white;
   border: none;
   cursor: pointer;
 }
 
-.place-card__like-icon:hover {
+.card__like-icon:hover {
   transform: scale(1.03);
 }

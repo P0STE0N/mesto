@@ -1,12 +1,15 @@
 @import url(./__image/card__image.css);
 @import url(./__like-icon/card__like-icon.css);
+@import url(./__liked/card__liked.css);
 @import url(./__description/card__description.css);
 @import url(./__name/card__name.css);
+@import url(./__remove/card__remove.css);
 
 .card {
+  position: relative;
   width: 282px;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 11px;
   min-height: 360px;
   font-family: Inter;
 }
@@ -14,5 +17,6 @@
 @media screen and (max-width: 890px) {
   .card {
     margin: 0 auto;
+    
   }
 }

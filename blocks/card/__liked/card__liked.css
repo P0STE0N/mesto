@@ -1,0 +1,8 @@
+.card__liked {
+    background-image: url(../../../image/liked.svg);
+  }
+  
+  .card__liked:hover {
+    transform: scale(1.03);
+  }
+  

@@ -14,3 +14,16 @@
     width: calc(100% - 60px);
   }
 }
+
+
+
+.popup__content_img {  
+  position: relative;
+  margin: 100px auto;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  max-width: 75vw;
+  max-height: 75vh;
+  width: max-content;
+}
