@@ -11,7 +11,6 @@ let userProff = document.querySelector(".profile__info-subtitle");
 let popupImg = document.querySelector('.popupImg');
 let bigImage = document.querySelector('.popup__content_img');
 let closePopupImg = document.querySelector('.popupImg__close');
-let cardElement = document.querySelector('.card');
 let popupAdd = document.querySelector(".popupAdd");
 let addButton = document.querySelector(".profile__addButton");
 let closePopupAdd = document.querySelector(".popupAdd__close");
@@ -94,31 +93,15 @@ renderCards();
 
 
 function addCard(imgCard , nameCard ) {
-  const cardContainer = document.createElement('div');
-  cardContainer.classList.add('card');
 
-  const removeContainer = document.createElement('button');
-  removeContainer.classList.add('card__remove');
+  const cardTemplate = document.querySelector('#card-template').content;
+  const cardElement = cardTemplate.cloneNode(true);
 
-  const imgContainer = document.createElement('img');
-  imgContainer.classList.add('card__image');
-  imgContainer.src= imgCard;
-  imgContainer.alt= nameCard;
-
-  const descriptionContainer = document.createElement('div');
-  descriptionContainer.classList.add('card__description');
-
-  const nameContainer = document.createElement('h2');
-  nameContainer.classList.add('card__name');
-  nameContainer.textContent = nameCard;
-
-  const likeContainer = document.createElement('button');
-  likeContainer.classList.add('card__like-icon');
-
-  descriptionContainer.append(nameContainer, likeContainer );
-  cardContainer.append(removeContainer , imgContainer , descriptionContainer);
+  cardElement.querySelector('.card__image').src= imgCard;
+  cardElement.querySelector('.card__image').alt= nameCard;
+  cardElement.querySelector('.card__name').textContent = nameCard;
   
-  cardList.prepend(cardContainer);
+  cardList.prepend(cardElement);
 
 
 }
