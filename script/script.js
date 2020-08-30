@@ -1,28 +1,26 @@
-let profile = document.querySelector(".profile");
-let popup = document.querySelector(".popup");
-let editButton = profile.querySelector(".profile__editButton");
-let closePopup = popup.querySelector(".popup__close");
-let saveButton = popup.querySelector(".popup__button");
-let userForm = document.querySelector(".popup__form");
-let nameInput = document.querySelector(".popup__input_type_name");
-let jobInput = document.querySelector(".popup__input_type_proff");
-let userName = document.querySelector(".profile__info-title");
-let userProff = document.querySelector(".profile__info-subtitle");
-let popupImg = document.querySelector('.popupImg');
-let bigImage = document.querySelector('.popup__content_img');
-let closePopupImg = document.querySelector('.popupImg__close');
-let popupAdd = document.querySelector(".popupAdd");
-let addButton = document.querySelector(".profile__addButton");
-let closePopupAdd = document.querySelector(".popupAdd__close");
-let saveButtonAdd = popupAdd.querySelector(".popupAdd__button");
-let userFormAdd = document.querySelector(".popupAdd__form");
-let nameInputAdd = document.querySelector(".popupAdd__input_type_name");
-let linkInputAdd = document.querySelector(".popupAdd__input_type_link");
-let cardImg = document.querySelector(".card__image");
-let image = document.querySelector('.popupImg__src');
-let title = document.querySelector('.popupImg__title');
-let titleCard = document.querySelector('.card__name');
-let cardList = document.querySelector(".card-list");
+const profile = document.querySelector(".profile");
+const popup = document.querySelector(".popup");
+const editButton = profile.querySelector(".profile__editButton");
+const closePopup = popup.querySelector(".popup__close");
+const saveButton = popup.querySelector(".popup__button");
+const userForm = document.querySelector(".popup__form");
+const nameInput = document.querySelector(".popup__input_type_name");
+const jobInput = document.querySelector(".popup__input_type_proff");
+const userName = document.querySelector(".profile__info-title");
+const userProff = document.querySelector(".profile__info-subtitle");
+const popupImg = document.querySelector('.popupImg');
+const closePopupImg = document.querySelector('.popupImg__close');
+const popupAdd = document.querySelector(".popupAdd");
+const addButton = document.querySelector(".profile__addButton");
+const closePopupAdd = document.querySelector(".popupAdd__close");
+const saveButtonAdd = popupAdd.querySelector(".popupAdd__button");
+const userFormAdd = document.querySelector(".popupAdd__form");
+const image = document.querySelector('.popupImg__src');
+const title = document.querySelector('.popupImg__title');
+const cardList = document.querySelector(".card-list");
+const name = document.querySelector('.popupAdd__input_type_name');
+const link = document.querySelector('.popupAdd__input_type_link');
+const cardTemplate = document.querySelector('#card-template').content;
 
 function exitPopup() {
   popup.classList.remove("popup-open");
@@ -94,7 +92,6 @@ renderCards();
 
 function addCard(imgCard , nameCard ) {
 
-  const cardTemplate = document.querySelector('#card-template').content;
   const cardElement = cardTemplate.cloneNode(true);
 
   cardElement.querySelector('.card__image').src= imgCard;
@@ -108,9 +105,6 @@ function addCard(imgCard , nameCard ) {
 
 userFormAdd.addEventListener('submit', function (evt) {
   evt.preventDefault();
-  const name = document.querySelector('.popupAdd__input_type_name');
-  const link = document.querySelector('.popupAdd__input_type_link');
-
   addCard(link.value, name.value);
 
   name.value = '';
