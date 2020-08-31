@@ -22,18 +22,9 @@ const name = document.querySelector('.popupAdd__input_type_name');
 const link = document.querySelector('.popupAdd__input_type_link');
 const cardTemplate = document.querySelector('#card-template').content;
 
-function exitPopup() {
-  popup.classList.remove("popup-open");
-}
 
-function openPopup() {
-  popup.classList.add("popup-open");
-  nameInput.value = userName.textContent;
-  jobInput.value = userProff.textContent;
-}
-
-function exitPopupImg() {
-  popupImg.classList.remove("popup-open");
+function togglePopup(popup) {
+  popup.classList.toggle("popup-open");
 }
 
 function formSubmitHandler(evt) {
@@ -42,16 +33,7 @@ function formSubmitHandler(evt) {
   userName.textContent = nameInput.value;
   userProff.textContent = jobInput.value;
 
-  exitPopup();
-}
-
-
-function exitPopupAdd() {
-  popupAdd.classList.remove("popup-open");
-  
-}
-function openPopupAdd() {
-  popupAdd.classList.add("popup-open");
+  togglePopup(popup);
 }
 
 const initialCards = [
@@ -109,12 +91,12 @@ userFormAdd.addEventListener('submit', function (evt) {
 
   name.value = '';
   link.value = '';
-  exitPopupAdd();
+  togglePopup(popupAdd);
 });
 
 cardList.addEventListener('click', function(event) {
-  let target = event.target;
-  if (target.classList.contains("card__remove")) {
+    const { target } = event;
+    if (target.classList.contains("card__remove")) {
       cardList.removeChild(target.parentNode);
       return;
   }
@@ -128,16 +110,27 @@ cardList.addEventListener('click', function(event) {
     image.src = `${imageLink}`;
     title.textContent = `${imageTitle}`;
     
-    popupImg.classList.add('popup-open'); 
+    togglePopup(popupImg);
   }
 })
 
-
 userForm.addEventListener("submit", formSubmitHandler);
-editButton.addEventListener("click", openPopup);
-closePopup.addEventListener("click", exitPopup);
-closePopupImg.addEventListener("click", exitPopupImg);
-saveButtonAdd.addEventListener("click", userFormAdd);
-addButton.addEventListener("click", openPopupAdd);
-closePopupAdd.addEventListener("click", exitPopupAdd);
+
+editButton.addEventListener("click", function() {
+  nameInput.value = userName.textContent;
+  jobInput.value = userProff.textContent;
+  togglePopup(popup)
+});
+closePopup.addEventListener("click", function() {
+  togglePopup(popup)
+});
+closePopupImg.addEventListener("click", function() {
+  togglePopup(popupImg)
+});
+addButton.addEventListener("click", function() {
+  togglePopup(popupAdd)
+});
+closePopupAdd.addEventListener("click", function() {
+  togglePopup(popupAdd)
+});
 
